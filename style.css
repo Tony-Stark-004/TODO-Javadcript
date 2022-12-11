@@ -1,0 +1,204 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+   font-family: Arial, Helvetica, sans-serif; 
+  /* font-family: 'Fredoka One', cursive; */
+  color: aliceblue;
+}
+
+header{
+  background: #001119;
+}
+
+#top-div{
+    display: flex;
+    justify-content:space-between;
+}
+
+#heading{
+  margin-top: 1.25em;
+  margin-bottom: 0.3em;
+  margin-left: 3.1em;
+}
+
+#awesome-btn{
+  margin-top: 1.25em;
+  margin-right: 3.1em;
+}
+
+header div div p{
+  display: inline;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.fa-solid{
+  font-size: 2em;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+}
+
+.fa-solid:hover{
+  box-shadow: 4px 4px 8px rgba(7, 7, 7, 0.4);
+}
+
+/* part -2 */
+
+#pop-up{
+    width: 28em;
+    height: 15em;
+    border: 2px solid black;
+    margin-left: 50%;
+    margin-top: 15%; 
+    transform: translate(-50%, -25%);
+    position: absolute;
+    /* z-index: 1; */
+    background-color: white;
+}
+
+#para-part-2{
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 0.8em;
+  padding-bottom: 0.2em;
+}
+
+#input-div{
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+input{
+  width: 22em;
+  height: 2.5em;
+  text-align: center;
+  padding: 1.2em;
+  font-family: 'Fredoka One', cursive;
+}
+
+#pop-up-btn{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+
+.btn{
+  background-color: #001119;
+  color: aliceblue;
+  border-color: #001119;
+  border-style: solid;
+  border-width: 0.8px;
+  border-radius: 18px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font: 18px;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+  vertical-align: top;
+  width: 6em;
+}
+
+
+.btn:hover{
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+}
+
+/* part 3 */
+
+.list-pop-up-div{
+  width: 15em;
+  min-height: 42vh;
+  border: 2px solid black;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  /* z-index: 0; */
+}
+
+.para-head{
+  padding-top: 1.5em;
+  padding-bottom: 0.3em;
+  text-align: center;
+  font-size: smaller;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.fa-brands{
+  color: #001119;
+  font-size: 1.5em;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+}
+
+.fa-brands:hover{
+  box-shadow: 4px 4px 8px rgba(7, 7, 7, 0.4);
+}
+
+.fa-dragon{
+  color: #001119;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+#flex-awesome{
+  display: flex;
+  justify-content:flex-end;
+  gap: 0.5em;
+  margin-right: 1em;
+  margin-top: 76%;
+}
+
+#lists{
+  position: absolute;
+  color: black;
+  width: 15em;
+  text-align: center;
+  margin-top: 0.8em;
+}
+
+.lists{
+    font-size: 1.1em;
+    font-family: 'Fredoka One', cursive;
+    vertical-align: middle;
+    display: inline;
+  }
+
+  .list-btn{
+    background-color: #001119;
+    color: aliceblue;
+    border-color: #001119;
+    border-style: solid;
+    border-width: 0.8px;
+    border-radius: 18px;
+    font: 18px;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+    vertical-align: middle;
+    margin-left: 0.5em;
+    width: 6em;
+    height: 1.5em;
+    visibility: hidden;
+    font-family: 'Fredoka One', cursive;
+  }
+
+  .list-btn:hover{
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+  }
+
+  .lists-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1em;
+  }
