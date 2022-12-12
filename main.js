@@ -1,4 +1,5 @@
 var i = 0;
+let d = 0;
 document.querySelector('.fa-dice-d20').addEventListener('click', () =>{
     const popUp = `<div id="pop-up">
 
@@ -36,7 +37,7 @@ todo = ` <div class="list-pop-up-div">
 </header>
 
       <div id="lists" class="markdone">
-          <p class="lists"></p><button class="list-btn">mark done</button><br />  
+          
       </div>
 
 <div id="flex-awesome">
@@ -52,7 +53,6 @@ todo = ` <div class="list-pop-up-div">
 
 
     document.querySelector('.lists-div').innerHTML += todo;
-    // document.querySelector('.para-head').textContent = valueInput
     let arr = document.querySelectorAll('.para-head');
     do {
       arr[i].textContent = valueInput;
@@ -61,12 +61,10 @@ todo = ` <div class="list-pop-up-div">
     }while(false);
 
 
-
-
-
     // add task
     let addBtn = document.querySelectorAll('.fa-brands');
     let addTask = document.querySelector('#pop-up-index');
+    let addItemDiv = document.querySelectorAll('.markdone')
 
    for(let k = 0; k<arr.length; k++) {
     addBtn[k].addEventListener('click', () => {
@@ -75,14 +73,24 @@ todo = ` <div class="list-pop-up-div">
 
       // add
       document.querySelector('#add-btn').addEventListener('click', () => {
-        document.querySelector('.lists').textContent = valueInput;
-        document.querySelector('.list-btn').style.visibility = "visible";
-        document.querySelector('#pop-up').style.visibility = "hidden";
 
-        // mark done
-        document.querySelector('.list-btn').addEventListener('click', () => {
-        document.querySelector('.lists').style.textDecoration = "line-through";
-        });
+        addItemDiv[k].innerHTML += '<p class="lists"></p><button class="list-btn">mark done</button><br />'
+        let addItem = document.querySelectorAll('.lists')
+        let markDoneBtn = document.querySelectorAll('.list-btn')
+
+      for(let a = 0; a < addItem.length; a++) {
+        document.querySelector('#pop-up').style.visibility = "hidden";
+        addItem[d].textContent = document.querySelector('#todo-input').value 
+        markDoneBtn[a].style.visibility = "visible";
+
+        markDoneBtn[a].addEventListener('click', () => {
+          addItem[a].style.textDecoration = "line-through";
+          markDoneBtn[a].style.display = "none";
+          });
+
+      }
+          d++
+
       });
 
 
@@ -93,9 +101,6 @@ todo = ` <div class="list-pop-up-div">
 });
 
    }
-
-
-
 
 
   // removing container task
@@ -111,8 +116,6 @@ todo = ` <div class="list-pop-up-div">
    }
       
 });
-
-
 
 
 // close pop-up
