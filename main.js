@@ -46,6 +46,21 @@ todo = ` <div class="list-pop-up-div">
 </div>
 </div>`
 
+paraClick = ` <header>
+<div id="top-div">
+
+  <div id="heading">
+    <h1>Tasks List</h1>
+  </div>
+
+  <div id="awesome-btn">
+    <p id="para">Add item</p>
+    <i class="fa-solid fa-dice-d20"></i>
+  </div>
+
+</div>
+</header>
+<hr />`
 
 // add pop - up
   document.querySelector('#add-btn').addEventListener('click', () => {
@@ -59,6 +74,57 @@ todo = ` <div class="list-pop-up-div">
       i++
       document.querySelector('#pop-up').style.visibility = "hidden";
     }while(false);
+
+
+
+
+
+
+
+
+
+    paraBox = `<div class="para-click">
+    <header>
+      <div id="top-div">
+  
+        <div id="heading">
+          <i class="fa-brands fa-wolf-pack-battalion"></i>
+          <h1 id="back-heading">Back</h1>
+        </div>
+  
+          <p class="card-chosen"></p>
+  
+        <div id="awesome-btn">
+          <p id="para">Add item</p>
+          <i class="fa-solid fa-dice-d20"></i>
+        </div>
+  
+      </div>
+    </header>
+    <hr />
+   </div> `
+
+    let helloMe = document.querySelector('#hello-me');
+
+    for(let para = 0; para < arr.length; para++) {
+
+      arr[para].addEventListener('click', () => {
+      document.querySelector('.lists-div').style.display = "none"
+      document.querySelector('#part-1-header').style.display = "none"
+      helloMe.innerHTML = paraBox;
+      document.querySelector('.card-chosen').textContent = arr[para].textContent
+      document.querySelector('#special-card').innerHTML = todo
+      document.querySelector('#special-card .para-head').textContent = arr[para].textContent
+
+     });
+    }
+
+
+
+
+  
+
+
 
 
     // add task
@@ -124,6 +190,8 @@ document.querySelector('#close-btn').addEventListener('click', () => {
 });
 
 });
+
+// document.querySelector('#text').style.display = "unset"
 
 
 

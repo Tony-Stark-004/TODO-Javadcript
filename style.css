@@ -131,6 +131,7 @@ input{
   font-size: smaller;
   font-weight: bold;
   color: aliceblue;
+  cursor: pointer;
 }
 
 .fa-brands{
@@ -202,3 +203,34 @@ input{
     justify-content: space-between;
     margin-top: 1em;
   }
+
+  /* para -click div */
+
+  .para-click{
+    width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+
+  .fa-wolf-pack-battalion{
+    color: white; 
+    margin-right: 0.2em;
+    font-size: 2em;
+  }
+
+  #back-heading{
+    display: inline; 
+    vertical-align: middle;
+  }
+
+  .card-chosen{
+    font-size: 1.5em;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+ #special-card{
+  margin-top: 2%;
+  margin-left: 40%;
+ }
