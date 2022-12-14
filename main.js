@@ -76,12 +76,6 @@ paraClick = ` <header>
     }while(false);
 
 
-
-
-
-
-
-
   // making para click container
     paraBox = `<div class="para-click">
     <header>
@@ -106,6 +100,7 @@ paraClick = ` <header>
 
     let helloMe = document.querySelector('#hello-me');
     let know = document.querySelectorAll('.list-pop-up-div')
+    let specialCard = document.querySelector('#special-card');
 
     for(let para = 0; para < arr.length; para++) {
 
@@ -122,28 +117,30 @@ paraClick = ` <header>
         document.querySelector('.lists-div').style.display = "flex"
         document.querySelector('#part-1-header').style.display = "inherit"
         document.querySelector('#hello-me').style.display = "none"
-        // document.querySelector('#special-card').style.display = "none"
-
-
+        document.querySelector('.lists-div').appendChild(specialCard);
+        
      }); 
 
   
-
      // fa-dice add button
      document.querySelector('#fa-dice').addEventListener('click', () => {
       document.querySelector('#pop-up-index').innerHTML = popUp;
 
- 
+      
       // add
       document.querySelector('#add-btn').addEventListener('click', () => {
-
+        
+          ++i;
         document.querySelector('.lists-div').innerHTML += todo
         document.querySelector('.lists-div').style.display = "flex"
         document.querySelector('#part-1-header').style.display = "inherit"
         document.querySelector('#hello-me').style.display = "none"
-        document.querySelector('#pop-up').style.visibility = "hidden";
-        // document.querySelector('.para-head').textContent = document.querySelector('#todo-input').value
-
+        document.querySelector('#pop-up').style.visibility = "hidden"
+        document.querySelector('.lists-div').appendChild(specialCard);
+        console.log(i);
+        var g =document.querySelectorAll(`.para-head`);
+        console.log(g[i-2])
+        g[i-2].textContent = document.querySelector('#todo-input').value
         
       }); // add end
 
@@ -161,10 +158,6 @@ paraClick = ` <header>
 
 
     }     // for loop ends
-
-  
-
-
 
 
     // add task
@@ -228,7 +221,7 @@ document.querySelector('#close-btn').addEventListener('click', () => {
   document.querySelector('#pop-up').style.visibility = "hidden";
 });
 
-});
+})
 
 
 
@@ -240,53 +233,5 @@ document.querySelector('#close-btn').addEventListener('click', () => {
 
 
 
-// arr[para].addEventListener('click', () => {
-        
-//   document.querySelector('#special-card').innerHTML = `<div class="lists-div"></div>`
-//  document.querySelector('.lists-div').style.display = "unset"
-// document.querySelector('#part-1-header').style.display = "none"
-// helloMe.innerHTML = paraBox;
-// document.querySelector('.card-chosen').textContent = arr[para].textContent
-// //  document.querySelector('#special-card').innerHTML = todo
-// // document.querySelector('#special-card .para-head').textContent = arr[para].textContent
-
-// // back - btn
-// document.querySelector('.fa-wolf-pack-battalion').addEventListener('click', () => {
-// document.querySelector('.lists-div').style.display = "flex"
-// document.querySelector('#part-1-header').style.display = "inherit"
-// document.querySelector('#hello-me').style.display = "none"
-// document.querySelector('#special-card').style.display = "none"
-
-// }); 
-
-// delete -little button
-
-// let select = document.querySelector('#special-card .fa-dragon');
-//   select.addEventListener('click', () => {
-//     document.querySelector('.lists-div').style.display = "flex"
-//     document.querySelector('#part-1-header').style.display = "inherit"
-//     document.querySelector('#hello-me').style.display = "none"
-//     document.querySelector('#special-card').style.display = "none"
-//   })
-
-//   // add little button
-//   let addSelect = document.querySelector('#special-card .fa-teamspeak');
-//     addSelect.addEventListener('click', () => {
-//       addTask.innerHTML = popUp;
-//       document.querySelector('#para-part-2').textContent = "Add New Items"
-
-
-
-
-
-
-
-
-
-//       // again add - pop
-//       document.querySelector('#add-btn').addEventListener('click', () => { 
-//         document.querySelector('#pop-up-index')
-//       })
-//   })
 
 
