@@ -1,6 +1,6 @@
 var i = 0;
 let d = 0;
-document.querySelector('.fa-dice-d20').addEventListener('click', () =>{
+document.querySelector('.fa-dice-d20').addEventListener('click', () => {
     const popUp = `<div id="pop-up">
 
     <header>
@@ -82,7 +82,7 @@ paraClick = ` <header>
 
 
 
-
+  // making para click container
     paraBox = `<div class="para-click">
     <header>
       <div id="top-div">
@@ -96,7 +96,7 @@ paraClick = ` <header>
   
         <div id="awesome-btn">
           <p id="para">Add item</p>
-          <i class="fa-solid fa-dice-d20"></i>
+          <i class="fa-solid fa-dice-d20" id="fa-dice"></i>
         </div>
   
       </div>
@@ -105,22 +105,62 @@ paraClick = ` <header>
    </div> `
 
     let helloMe = document.querySelector('#hello-me');
+    let know = document.querySelectorAll('.list-pop-up-div')
 
     for(let para = 0; para < arr.length; para++) {
 
       arr[para].addEventListener('click', () => {
-      document.querySelector('.lists-div').style.display = "none"
-      document.querySelector('#part-1-header').style.display = "none"
-      helloMe.innerHTML = paraBox;
-      document.querySelector('.card-chosen').textContent = arr[para].textContent
-      document.querySelector('#special-card').innerHTML = todo
-      document.querySelector('#special-card .para-head').textContent = arr[para].textContent
+        helloMe.innerHTML = paraBox;
+        document.querySelector('.lists-div').style.display = "none"
+        document.querySelector('#part-1-header').style.display = "none"
+        document.querySelector('#special-card').appendChild(know[para])
+        document.querySelector('.card-chosen').textContent = arr[para].textContent
+     
+    
+ // back - btn
+      document.querySelector('.fa-wolf-pack-battalion').addEventListener('click', () => {
+        document.querySelector('.lists-div').style.display = "flex"
+        document.querySelector('#part-1-header').style.display = "inherit"
+        document.querySelector('#hello-me').style.display = "none"
+        // document.querySelector('#special-card').style.display = "none"
 
-     });
-    }
+
+     }); 
+
+  
+
+     // fa-dice add button
+     document.querySelector('#fa-dice').addEventListener('click', () => {
+      document.querySelector('#pop-up-index').innerHTML = popUp;
+
+ 
+      // add
+      document.querySelector('#add-btn').addEventListener('click', () => {
+
+        document.querySelector('.lists-div').innerHTML += todo
+        document.querySelector('.lists-div').style.display = "flex"
+        document.querySelector('#part-1-header').style.display = "inherit"
+        document.querySelector('#hello-me').style.display = "none"
+        document.querySelector('#pop-up').style.visibility = "hidden";
+        // document.querySelector('.para-head').textContent = document.querySelector('#todo-input').value
+
+        
+      }); // add end
 
 
+      // close
+      document.querySelector('#close-btn').addEventListener('click', () => {
+        document.querySelector('#pop-up').style.visibility = "hidden";
+      });  // close end
 
+
+   }); // fa dice add button end
+
+
+     }); // para-click end
+
+
+    }     // for loop ends
 
   
 
@@ -175,7 +215,6 @@ paraClick = ` <header>
 
    for(let j = 0; j<arr.length; j++) {
     deleteBtn[j].addEventListener('click', () => {
-      // document.querySelector('.list-pop-up-div').style.display = "none";
        remove[j].style.display = "none";
    });
    
@@ -191,7 +230,63 @@ document.querySelector('#close-btn').addEventListener('click', () => {
 
 });
 
-// document.querySelector('#text').style.display = "unset"
 
+
+
+
+
+
+
+
+
+
+// arr[para].addEventListener('click', () => {
+        
+//   document.querySelector('#special-card').innerHTML = `<div class="lists-div"></div>`
+//  document.querySelector('.lists-div').style.display = "unset"
+// document.querySelector('#part-1-header').style.display = "none"
+// helloMe.innerHTML = paraBox;
+// document.querySelector('.card-chosen').textContent = arr[para].textContent
+// //  document.querySelector('#special-card').innerHTML = todo
+// // document.querySelector('#special-card .para-head').textContent = arr[para].textContent
+
+// // back - btn
+// document.querySelector('.fa-wolf-pack-battalion').addEventListener('click', () => {
+// document.querySelector('.lists-div').style.display = "flex"
+// document.querySelector('#part-1-header').style.display = "inherit"
+// document.querySelector('#hello-me').style.display = "none"
+// document.querySelector('#special-card').style.display = "none"
+
+// }); 
+
+// delete -little button
+
+// let select = document.querySelector('#special-card .fa-dragon');
+//   select.addEventListener('click', () => {
+//     document.querySelector('.lists-div').style.display = "flex"
+//     document.querySelector('#part-1-header').style.display = "inherit"
+//     document.querySelector('#hello-me').style.display = "none"
+//     document.querySelector('#special-card').style.display = "none"
+//   })
+
+//   // add little button
+//   let addSelect = document.querySelector('#special-card .fa-teamspeak');
+//     addSelect.addEventListener('click', () => {
+//       addTask.innerHTML = popUp;
+//       document.querySelector('#para-part-2').textContent = "Add New Items"
+
+
+
+
+
+
+
+
+
+//       // again add - pop
+//       document.querySelector('#add-btn').addEventListener('click', () => { 
+//         document.querySelector('#pop-up-index')
+//       })
+//   })
 
 

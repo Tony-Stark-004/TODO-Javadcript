@@ -210,7 +210,7 @@ input{
     width: 50em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 1em;
   }
 
   .fa-wolf-pack-battalion{
@@ -230,7 +230,9 @@ input{
     margin-bottom: auto;
   }
 
- #special-card{
-  margin-top: 2%;
-  margin-left: 40%;
- }
+  #special-card{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+  
+  } 
